@@ -1,24 +1,80 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
 
-Things you may want to cover:
+### Association
+- has_many :messages
+- has_many :station_users
+- has_many :sations, through: :station_users
+- has_many :line_users
+- has_many :lines, through: :line_users
 
-* Ruby version
+## linesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
 
-* System dependencies
+### Association
+- has_many :messages
+- has_many :line_stations
+- has_many :stations, through: :line_stations
+- has_many :line_users
+- has_many :users, through: :line_users
 
-* Configuration
+## stationsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
 
-* Database creation
+### Association
+- has_many :messages
+- has_many :line_stations
+- has_many :lines, through: :line_stations
+- has_many :station_users
+- has_many :users, through: :station_users
 
-* Database initialization
+## messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|body|text||
+|image|string||
+|line_id|references :line|foreign_key: true|
+|station_id|references :station|foreign_key: true|
+|user_id|references :user|foreign_key: true|
 
-* How to run the test suite
+### Association
+- belongs_to :line
+- belongs_to :station
+- belongs_to :user
 
-* Services (job queues, cache servers, search engines, etc.)
+## line_stationsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|line_id|references :line|foreign_key: true|
+|station_id|references :station|foreign_key: true|
 
-* Deployment instructions
+### Association
+- belongs_to :line
+- belongs_to :station
 
-* ...
+## line_usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|line_id|references :line|foreign_key: true|
+|user_id|references :user|foreign_key: true|
+
+### Association
+- belongs_to :line
+- belongs_to :user
+
+## station_usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|station_id|references :station|foreign_key: true|
+|user_id|references :user|foreign_key: true|
+
+### Association
+- belongs_to :station
+- belongs_to :user
