@@ -51,5 +51,5 @@ production:
   <<: *default
   database: train-chat_production
   username: root
-  password: <%= ENV['Kjd3974sje'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
