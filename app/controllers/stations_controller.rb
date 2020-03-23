@@ -6,7 +6,6 @@ class StationsController < ApplicationController
   end
 
   private
-
   def set_line
     @line = Line.find(params[:line_id])
   end
