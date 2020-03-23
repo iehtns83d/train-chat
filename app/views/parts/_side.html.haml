@@ -1,0 +1,17 @@
+.side
+  .side__user
+    .side__user__name
+      = current_user.name
+    .side__user__register_line
+      = link_to "路線登録",edit_line_path(current_user)
+    .side__user__logout
+      = link_to "ログアウト",edit_user_path(current_user) 
+  .side__line-list
+    -if !current_user.lines.empty?
+      - current_user.lines.each do |line|
+        = link_to line_stations_path(line), class: "line" do
+          = image_tag src=line.image, alt: '写真', height: '30'
+          = line.name+'線'
+    -else
+      .no-select
+        ①路線を登録してください

@@ -1,0 +1,3 @@
+= form_for current_user,:url => { :controller => :lines, :action => :update } do |f|  
+  = f.collection_check_boxes :line_ids, Line.all, :id, :name
+  = f.submit "Save", class: "chat-line-form__action-btn"

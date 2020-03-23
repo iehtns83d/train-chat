@@ -7,7 +7,7 @@
 ### Association
 - has_many :messages
 - has_many :station_users
-- has_many :sations, through: :station_users
+- has_many :stations, through: :station_users
 - has_many :line_users
 - has_many :lines, through: :line_users
 

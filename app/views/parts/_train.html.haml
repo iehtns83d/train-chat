@@ -1,0 +1,27 @@
+.train
+  .train__line-image
+    -if @line!=nil
+      = image_tag src=@line.image, alt: '写真', height: '50'
+    -else
+      .no-select
+        ②路線を選択してください
+  .train__line-name
+    -if @line!=nil
+      = @line.name+'線'
+    -else
+      .no-select
+        ②路線を選択してください
+  .train__station
+    -if @line!=nil
+      - @line.stations.each do |station|
+        = link_to line_station_messages_path(@line,station), class: "station" do    
+          = station.name
+    -else
+      .no-select
+        ②路線を選択してください
+  .train__station-detail
+    -if @line!=nil && @station!=nil
+      =@station.name+'駅'
+    -else
+      .no-select
+        ③駅を選択してください
