@@ -1,0 +1,19 @@
+.chat
+  .chat__message-list
+    -if @line!=nil && @station!=nil
+      = render @messages
+    -else
+      .no-select
+        ③駅を選択してください
+  .chat__form 
+    -if @line!=nil && @station!=nil 
+      = form_for [@line,@station,@message] do |f|
+        .input-box
+          = f.text_field :content, class: 'input-box__text', placeholder: '駅の情報を共有しましょう！'
+          = f.label :image, class: 'input-box__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'input-box__image__file'
+        = f.submit 'Send', class: 'submit-btn'
+    -else
+      .no-select
+        ③駅を選択してください
