@@ -60,7 +60,7 @@
       line-height: 100px;
       font-size: 50px;
       color: red;
-      background-image:url(train.png);
+      background-image:image-url('train.png');
       background-size: 100% 100%;
     }
     &__register_line{
@@ -121,7 +121,7 @@
   height: calc(100vh - 200px);
   &__message-list{
     height: 550px;
-    background-image:url(train-background.jpg);
+    background-image:image-url('train-background.jpg');
     background-size: 100% 100%;
     padding: 30px 40px;
     overflow: scroll;
