@@ -22,6 +22,8 @@
   .train__station-detail
     -if @line!=nil && @station!=nil
       =@station.name+'駅'
+      - @station.line.each do |lines|
+        = line.name
     -else
       .no-select
         ③駅を選択してください
