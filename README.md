@@ -20,8 +20,9 @@ http://13.113.210.95
 
 ## DEMO
 * 使用する路線の駅を選択し、その駅のチャットがリアルタイムで行うことができます
-![demo](https://user-images.githubusercontent.com/58354561/77869884-f4fcb480-727a-11ea-83c8-1f07bcfc4829.jpg)
-![demo](https://user-images.githubusercontent.com/58354561/77870132-8835ea00-727b-11ea-87b2-b3d7fe6d1429.gif)
+![demo](https://user-images.githubusercontent.com/58354561/77869884-f4fcb480-727a-11ea-83c8-1f07bcfc4829.jpg)  
+![demo](https://user-images.githubusercontent.com/58354561/77876940-50d13880-728f-11ea-8d0b-b30ba27eda6c.gif)  
+
 
 ## 工夫したポイント
 同じ駅で路線が違うと混雑状況は変わるので、チャットを路線毎に分けました。  
