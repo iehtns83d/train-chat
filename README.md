@@ -20,7 +20,7 @@ http://13.113.210.95
 そこで、混雑している駅の情報を画像やチャットを用いて共有できれば良いと思い作成しました。
 
 ## DEMO(gifで動画や写真を貼って、ビューのイメージを掴んでもらいます)
-![sample](https://user-images.githubusercontent.com/58354561/77867726-72bcc200-7273-11ea-8de4-69ab9e2db7ad.gif)
+* ![sample](https://user-images.githubusercontent.com/58354561/77867726-72bcc200-7273-11ea-8de4-69ab9e2db7ad.gif)
 
 ## 特に、デプロイがまだできていない場合はDEMOをつけることで見た目を企業側に伝えることができます。
 ## 工夫したポイント
