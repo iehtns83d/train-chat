@@ -2,6 +2,7 @@ Line.seed(
   { id:1,name: '山手',image:'JR.png'},
   { id:2,name: '埼京',image:'JR.png'},
   { id:3,name: '半蔵門',image:'Tokyo_metoro.png'},
+  { id:3,name: '半蔵門',image:'Tokyo_metoro.png'}
 )
 Station.seed(
 # 山手線
@@ -22,6 +23,7 @@ Station.seed(
   { id:48,name: '三越前'},{ id:49,name: '大手町'},{ id:50,name: '神保町'},{ id:51,name: '九段下'},{ id:52,name: '半蔵門'},
   { id:53,name: '永田町'},{ id:54,name: '青山一丁目'},{ id:55,name: '表参道'},
 )
+
 
 LineStation.seed(
 # 山手線

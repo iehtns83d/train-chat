@@ -21,9 +21,13 @@
         ②路線を選択してください
   .train__station-detail
     -if @line!=nil && @station!=nil
-      =@station.name+'駅'
-      - @station.line.each do |lines|
-        = line.name
+      .station-info
+        =@station.name+'駅'
+      .line-info
+        - @station.lines.each do |line|
+          -if @line != line
+            = link_to line_station_messages_path(line,@station) do
+              = line.name
     -else
       .no-select
         ③駅を選択してください
